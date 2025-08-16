@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VividAura Digital Photo Booths</title>
+  <meta name="description" content="VividAura Digital Photo Booths — Essence, Luxe, and Aura packages. Instant digital sharing, custom props, backdrops, and an attendant throughout. Katy & Houston, TX." />
+  <style>
+    :root {
+      --ink: #512D38;
+      --accent: #B27092;
+      --pink: #F4BFDB;
+      --bg: #FFE9F3;
+      --cta: #3533CD;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, var(--ink), var(--accent));
+      color: var(--white);
+      padding: 16px 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .brand img.logo {
+      height: 64px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      border-radius: 6px;
+      animation: fadeIn 1.2s ease both;
+    }
+    .brand .title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.3px;
+    }
+    nav {
+      margin-top: 8px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    nav a:hover { opacity: .9; transform: translateY(-1px); }
+    nav a.book { background: var(--ink); }
+    .hero {
+      padding: 56px 16px 48px;
+      background: linear-gradient(180deg, var(--pink), var(--bg));
+      animation: fadeIn .8s ease both;
+    }
+    .hero h1 { margin: 10px 0 6px; font-size: 2rem; color: var(--ink); }
+    .hero p.sub { margin: 0 0 18px; color: #6b5a63; }
+    .btn {
+      display: inline-block;
+      background: var(--cta);
+      color: var(--white);
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      transition: transform .15s ease, opacity .15s ease;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: .95; }
+    .section { padding: 44px 16px; }
+    .section h2 { color: var(--accent); margin: 0 0 20px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 8px;
+    }
+    @media (min-width: 720px) {
+      .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    .card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 18px 16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+      text-align: left;
+      opacity: 0;
+      transform: translateY(28px) scale(.98);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .card.show { opacity: 1; transform: translateY(0) scale(1); }
+    .card .name { font-size: 1.15rem; font-weight: 800; color: var(--ink); margin: 0; }
+    .price { font-weight: 800; color: var(--accent); margin: 6px 0 10px; }
+    ul.features { margin: 0; padding: 0 0 0 18px; }
+    ul.features li { margin: 8px 0; }
+    .note { margin-top: 14px; font-weight: 700; color: var(--cta); }
+    footer {
+      background: var(--ink);
+      color: var(--white);
+      padding: 22px 12px;
+      margin-top: 28px;
+      font-size: .95rem;
+      line-height: 1.4;
+    }
+    footer a { color: var(--white); text-decoration: underline; }
+    @keyframes fadeIn { from {opacity:0; transform: translateY(6px)} to {opacity:1; transform:none} }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img class="logo" src="logo.png" alt="VividAura Digital Photo Booths logo" />
+      <div class="title">VividAura Digital Photo Booths</div>
+    </div>
+    <nav>
+      <a href="#packages">Packages</a>
+      <a class="book" href="https://fs8.formsite.com/hUPvFm/tknu1ofs1q/index.html">Book Now</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Make Your Event Unforgettable</h1>
+    <p class="sub">Modern, elegant, and fun photo booth experiences for weddings, parties, and corporate events.</p>
+    <a class="btn" href="https://fs8.formsite.com/hUPvFm/tknu1ofs1q/index.html">Get a Quote</a>
+  </section>
+
+  <section id="packages" class="section">
+    <h2>Our Packages</h2>
+    <div class="cards">
+      <article class="card reveal">
+        <h3 class="name">✨ Essence</h3>
+        <div class="price">$275 · 2 hours</div>
+        <ul class="features">
+          <li>Photo booth + props table</li>
+          <li>Ring LED light</li>
+          <li>Instant digital sharing</li>
+          <li>Unlimited digital photos</li>
+          <li>Attendant present throughout</li>
+          <li>Extra lighting if needed</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <h3 class="name">💎 Luxe</h3>
+        <div class="price">$375 · 3 hours</div>
+        <ul class="features">
+          <li>Photo booth + custom props</li>
+          <li>Classic backdrop</li>
+          <li><strong>Custom name in the digital photo booth</strong></li>
+          <li>Ring LED light</li>
+          <li>Instant digital sharing</li>
+          <li>Unlimited digital photos</li>
+          <li>Attendant present throughout</li>
+          <li>Extra lighting if needed</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <h3 class="name">🌟 Aura</h3>
+        <div class="price">$475 · 4 hours</div>
+        <ul class="features">
+          <li>Photo booth with inflatable booth or custom backdrop</li>
+          <li>Premium custom props + props table</li>
+          <li><strong>Custom name in the digital photo booth</strong></li>
+          <li>Ring LED light</li>
+          <li>Instant digital sharing</li>
+          <li>Unlimited digital photos</li>
+          <li>Attendant present throughout</li>
+          <li>Extra lighting if needed</li>
+        </ul>
+      </article>
+    </div>
+    <p class="note">➕ Additional hours available for $75 each</p>
+  </section>
+
+  <footer>
+    <div>Contact: Ashley Castro · <a href="tel:13469712166">346-971-2166</a> · <a href="mailto:vividaurabooking@gmail.com">vividaurabooking@gmail.com</a></div>
+    <div>Katy & Houston, TX</div>
+  </footer>
+
+  <script>
+    // Reveal cards on scroll
+    (function() {
+      var cards = document.querySelectorAll('.card');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -50px 0px' });
+        cards.forEach(function(c) { io.observe(c); });
+      } else {
+        // Fallback for older browsers
+        cards.forEach(function(c) { c.classList.add('show'); });
+      }
+    })();
+  </script>
+</body>
+</html>
