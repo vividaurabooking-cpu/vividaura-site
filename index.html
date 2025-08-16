@@ -6,47 +6,55 @@
   <title>VividAura Photo Booths</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff0f5;
-      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #FFE9F3;
       text-align: center;
+      animation: fadeIn 2s ease-in;
     }
 
     header {
+      background: #7a0047;
+      color: white;
       padding: 20px;
-      background: #fff;
-      animation: fadeIn 2s;
+      animation: slideDown 1.5s ease-in-out;
     }
 
     header img {
-      max-width: 200px;
-      animation: zoomIn 2s;
+      max-width: 150px;
     }
 
-    h1 {
-      font-size: 2.5em;
-      color: #80004d;
-      margin: 10px 0;
-      animation: slideDown 1.5s;
+    section {
+      padding: 30px;
+    }
+
+    .flyer {
+      max-width: 90%;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: zoomIn 2s ease-in-out;
     }
 
     .packages {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       flex-wrap: wrap;
-      gap: 20px;
-      padding: 40px;
+      margin-top: 40px;
     }
 
     .package {
       background: white;
       border-radius: 12px;
       padding: 20px;
-      width: 300px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-      animation: fadeUp 1.5s;
+      width: 280px;
+      margin: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1.5s ease;
     }
 
     .package:hover {
@@ -54,96 +62,120 @@
     }
 
     .package h2 {
-      font-size: 1.5em;
-      color: #b30059;
+      color: #7a0047;
     }
 
-    .gallery {
-      display: flex;
-      overflow: hidden;
-      width: 100%;
-      margin: 40px 0;
-    }
-
-    .gallery img {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 10px;
-      border-radius: 10px;
-      animation: slideGallery 20s infinite linear;
-    }
-
-    .button {
+    .book-now {
       display: inline-block;
-      padding: 15px 25px;
-      background: #b30059;
+      background: #7a0047;
       color: white;
-      font-size: 1.2em;
-      text-decoration: none;
+      padding: 12px 24px;
       border-radius: 8px;
+      text-decoration: none;
       margin-top: 20px;
-      transition: background 0.3s, transform 0.3s;
-      animation: pulse 2s infinite;
+      transition: background 0.3s;
     }
 
-    .button:hover {
-      background: #80004d;
-      transform: scale(1.1);
+    .book-now:hover {
+      background: #a80060;
     }
 
     footer {
-      background: #80004d;
+      background: #333;
       color: white;
       padding: 20px;
-      margin-top: 30px;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    footer a {
+      color: #ff80b5;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     /* Animations */
-    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-    @keyframes fadeUp { from {opacity: 0; transform: translateY(40px);} to {opacity: 1; transform: translateY(0);} }
-    @keyframes slideDown { from {transform: translateY(-50px); opacity:0;} to {transform: translateY(0); opacity:1;} }
-    @keyframes zoomIn { from {transform: scale(0.5);} to {transform: scale(1);} }
-    @keyframes pulse { 0%,100% {transform: scale(1);} 50% {transform: scale(1.1);} }
-    @keyframes slideGallery {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes zoomIn {
+      from {transform: scale(0.8); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {transform: translateY(40px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="VividAura Logo">
+    <img src="VividAura 346-971-2166.png" alt="VividAura Logo">
     <h1>VividAura Digital Photo Booths</h1>
   </header>
 
-  <section class="gallery">
-    <img src="IMG_0112.png" alt="Photo Booth Setup 1">
-    <img src="IMG_0111.png" alt="Photo Booth Setup 2">
-    <img src="IMG_0113.png" alt="Package Flyer">
-    <img src="VividAura 346-971-2166.png" alt="Marketing Flyer">
+  <section>
+    <img src="flyer.png" alt="VividAura Flyer" class="flyer">
+
+    <div class="packages">
+      <div class="package">
+        <h2>✨ Essence Package</h2>
+        <p>2 hours of service<br>
+        Photo booth table with props<br>
+        Ring LED light<br>
+        Instant digital sharing<br>
+        Unlimited photos<br>
+        Attendant present<br>
+        Extra lighting if needed<br>
+        <strong>Total: $275</strong></p>
+      </div>
+
+      <div class="package">
+        <h2>💎 Luxe Package</h2>
+        <p>3 hours of service<br>
+        Photo booth table with custom props<br>
+        Classic backdrop<br>
+        Custom name branding in booth<br>
+        Ring LED light<br>
+        Instant digital sharing<br>
+        Unlimited photos<br>
+        Attendant present<br>
+        Extra lighting if needed<br>
+        <strong>Total: $375</strong></p>
+      </div>
+
+      <div class="package">
+        <h2>🌟 Aura Package</h2>
+        <p>4 hours of service<br>
+        Choice of custom backdrops or inflatable booth<br>
+        Photo booth table with props<br>
+        Ring LED light<br>
+        Instant digital sharing<br>
+        Unlimited photos<br>
+        Attendant present<br>
+        Extra lighting if needed<br>
+        <strong>Total: $475</strong></p>
+      </div>
+    </div>
+
+    <a href="https://fs8.formsite.com/hUPvFm/tknu1ofs1q/index" class="book-now" target="_blank">Book Now</a>
   </section>
-
-  <section class="packages">
-    <div class="package">
-      <h2>✨ Essence Package</h2>
-      <p>• 2 hours of service<br>• Photo booth with props<br>• Ring LED light<br>• Instant digital sharing<br>• Unlimited photos<br>• Attendant included<br>• Extra lighting if needed<br><br><strong>Total: $275</strong></p>
-    </div>
-
-    <div class="package">
-      <h2>💎 Luxe Package</h2>
-      <p>• 3 hours of service<br>• Custom props<br>• Classic backdrop<br>• Custom name branding<br>• Ring LED light<br>• Instant digital sharing<br>• Unlimited photos<br>• Attendant included<br>• Extra lighting if needed<br><br><strong>Total: $375</strong></p>
-    </div>
-
-    <div class="package">
-      <h2>🌟 Aura Package</h2>
-      <p>• 4 hours of service<br>• Choice of backdrop or inflatable booth<br>• Custom props<br>• Custom name branding<br>• Ring LED light<br>• Instant digital sharing<br>• Unlimited photos<br>• Attendant included<br>• Extra lighting if needed<br><br><strong>Total: $475</strong></p>
-    </div>
-  </section>
-
-  <a href="https://fs8.formsite.com/hUPvFm/tknu1ofs1q/index" class="button" target="_blank">📸 Book Now</a>
 
   <footer>
-    <p>📞 346-971-2166 | 📍 Katy & Houston | 📧 Vividaurabooking@gmail.com</p>
+    <p>📍 Serving Katy & Houston</p>
+    <p>📞 <a href="tel:3469712166">346-971-2166</a></p>
+    <p>📧 <a href="mailto:vividaurabooking@gmail.com">vividaurabooking@gmail.com</a></p>
   </footer>
 </body>
 </html>
