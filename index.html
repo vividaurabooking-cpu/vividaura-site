@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vividaura Photo Booths</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FFE9F3;
+      color: #512D38;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #87BAAB;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header img {
+      max-width: 140px;
+      display: block;
+      margin: 0 auto 15px;
+      animation: bounceIn 1.5s ease;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #512D38;
+    }
+
+    nav {
+      background: #512D38;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #FFE9F3;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #87BAAB;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+      animation: fadeUp 1s ease-in-out;
+    }
+
+    section img {
+      max-width: 60%;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    section img:hover {
+      transform: scale(1.03);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-top: 20px;
+      background: #512D38;
+      color: #FFE9F3;
+      font-size: 1.2em;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+      background: #87BAAB;
+      color: #512D38;
+    }
+
+    footer {
+      background: #512D38;
+      color: #FFE9F3;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Logo.jpeg" alt="Vividaura Logo">
+    <h1>VIVIDAURA PHOTO BOOTHS</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#flyer">Packages</a>
+    <a href="#book">Book Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>Welcome to Vividaura</h2>
+    <p>
+      At <strong>Vividaura</strong>, we believe every event deserves unforgettable moments. 
+      Our digital photo booths are designed to keep your guests entertained while capturing memories that last a lifetime. 
+      Whether it’s a wedding, birthday, corporate event, or community celebration, our booths bring a fun, interactive experience for all ages. 
+    </p>
+    <p>
+      We provide high-quality images, instant digital sharing, and customized backdrops to match your theme. 
+      With our professional team handling setup and assistance throughout your event, you can focus on enjoying the celebration while we handle the magic. 
+      Serving <strong>Katy & Houston</strong>, we’re here to make your next event shine!
+    </p>
+
+    <div style="margin-top: 30px; font-size: 1.2em; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+      <div>💍 <br><strong>Weddings</strong></div>
+      <div>🎉 <br><strong>Birthdays</strong></div>
+      <div>🏢 <br><strong>Corporate Events</strong></div>
+      <div>🎓 <br><strong>Graduations</strong></div>
+      <div>🎪 <br><strong>Community Events</strong></div>
+    </div>
+  </section>
+
+  <!-- Flyer Section -->
+  <section id="flyer">
+    <h2>Our Packages</h2>
+    <img src="Flyer.png" alt="Vividaura Packages Flyer">
+  </section>
+
+  <!-- Book Section -->
+  <section id="book">
+    <h2>Book Us Today</h2>
+    <a class="btn" href="https://fs8.formsite.com/hUPvFm/tknu1ofs1q/index" target="_blank">📸 Book Now</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 <a href="tel:3469712166">346-971-2166</a></p>
+    <p>📧 <a href="mailto:Vividaurabooking@gmail.com">Vividaurabooking@gmail.com</a></p>
+    <p>📍 Katy & Houston</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vividaura. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
